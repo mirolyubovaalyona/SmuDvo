@@ -1,0 +1,11 @@
+{% block content %}
+  {% if sent %}
+    <h1>E-mail successfully sent</h1>
+  {% else %}
+    <form enctype="multipart/form-data" action="{% url 'post_email' %}" method="post">
+      {{ form.as_p }}
+      {% csrf_token %}
+      <input type="submit" value="Send e-mail">
+    </form>
+  {% endif %}
+{% endblock %}

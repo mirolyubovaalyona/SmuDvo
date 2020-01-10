@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head> 
+    <meta charset="UTF-8"> 
+    <title>Изменение новости</title>
+    <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
+</head> 
+<body>
+    <div style="margin: 80px">
+        <h1 class="text-center">Редактирование новости</h1> <br>
+        <form method = "post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table class="table table-bordered">
+                {{ form }}
+            </table>
+            <button type="submit" class="btn btn-success float-left">Изменить новость</button>
+        </form>
+    </div>
+</body> 
+</html> 
