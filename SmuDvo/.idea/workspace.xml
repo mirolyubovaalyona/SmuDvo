@@ -24,6 +24,14 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectId" id="1WBgmsaaEcXfwk1zujeDo8fzShG" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -31,9 +39,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/email_django-master" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
@@ -92,7 +101,8 @@
       <workItem from="1579181915143" duration="155000" />
       <workItem from="1579183213843" duration="3875000" />
       <workItem from="1579196298874" duration="361000" />
-      <workItem from="1579197796961" duration="834000" />
+      <workItem from="1579197796961" duration="1953000" />
+      <workItem from="1579200128659" duration="505000" />
     </task>
     <servers />
   </component>
@@ -104,30 +114,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="550" y="35" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1579195481080" />
-    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579183287865">
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579200155333">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1579183287865" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1578628931561">
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1579200155333" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1579199750229">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1578628931561" />
-    <state width="1323" height="493" key="GridCell.Tab.0.bottom" timestamp="1579196139165">
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579199750229" />
+    <state width="1323" height="493" key="GridCell.Tab.0.bottom" timestamp="1579199754028">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="493" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579196139165" />
-    <state width="1323" height="493" key="GridCell.Tab.0.center" timestamp="1579196139165">
+    <state width="1323" height="493" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579199754028" />
+    <state width="1323" height="493" key="GridCell.Tab.0.center" timestamp="1579199754028">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="493" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579196139165" />
-    <state width="1323" height="493" key="GridCell.Tab.0.left" timestamp="1579196139164">
+    <state width="1323" height="493" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579199754028" />
+    <state width="1323" height="493" key="GridCell.Tab.0.left" timestamp="1579199754028">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="493" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579196139164" />
-    <state width="1323" height="493" key="GridCell.Tab.0.right" timestamp="1579196139165">
+    <state width="1323" height="493" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579199754028" />
+    <state width="1323" height="493" key="GridCell.Tab.0.right" timestamp="1579199754028">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="493" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579196139165" />
+    <state width="1323" height="493" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579199754028" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1579183294099">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

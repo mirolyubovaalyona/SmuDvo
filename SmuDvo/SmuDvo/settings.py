@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'send_email.apps.SendEmailConfig'
 ]
 
 MIDDLEWARE = [
@@ -136,3 +137,9 @@ EMAIL_HOST_USER = 'smu.dvo.ru@gmail.com'
 EMAIL_HOST_PASSWORD = 'c2707272wht[['
 EMAIL_PORT = 587
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = 'staticfiles'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
