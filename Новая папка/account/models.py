@@ -15,6 +15,7 @@ class Profile(models.Model):
     bio = models.TextField(default='')
     scientist = models.NullBooleanField(default=False)
     user_is_reject = models.NullBooleanField(default=False)
+    user_submit = models.NullBooleanField(default=False)
 
 
 class News(models.Model):

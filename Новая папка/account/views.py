@@ -56,6 +56,16 @@ def register(request):
                   {'user_form': user_form})
 
 
+def submit_an_application(request):
+    user = request.user.profile
+    profile_form = ProfileEditForm(instance=request.user.profile, data=request.POST, files=request.FILES)
+    # user = Profile.objects.get(id=id)
+    if not user.user_submit:
+        user.user_submit = True
+    user.save()
+    return HttpResponseRedirect("/account")
+
+
 @login_required
 def edit(request):
     if request.method == 'POST':
@@ -174,7 +184,6 @@ def add_to_scientists(request, id):  ##добавление в совет
     return HttpResponseRedirect("/account")
 
 
-
 @permission_required('account.can_edit')
 def delete_from_scientists(request, id):  ##удаление из совета
     user = Profile.objects.get(id=id)
@@ -183,6 +192,7 @@ def delete_from_scientists(request, id):  ##удаление из совета
         user.user_is_reject = False
     elif not user.user_is_reject:
         user.user_is_reject = True
+        user.user_submit = False
     user.save()
     return HttpResponseRedirect("/account")
 
@@ -210,3 +220,10 @@ def post_email(request):
     else:
         form = EmailPostForm()
     return render(request, 'email/email.html', {'form': form})
+
+
+# @permission_required('account.can_edit')
+# def submit_an_application(request, id ):
+#     user = Profile.objects.get(id=id)
+#     if not user.user_submit:
+#         user.user_submit = True

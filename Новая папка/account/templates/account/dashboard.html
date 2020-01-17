@@ -6,6 +6,8 @@
     <h1>Главная страница</h1>
     {% if not user.is_superuser %}
         <p><a href="{% url "edit" %}">Изменить данные профиля </a> </p>
+{#        {{ user.id }}#}
+        <p><a href="{% url "submit_an_application" %}">Подать заявку на вступление в совет </a> </p>
     {% endif %}
         <p><a href="{% url "password_change" %}">Изменить пароль</a></p>
     {% if user.is_superuser %}

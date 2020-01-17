@@ -34,6 +34,11 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="collations" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
     </expand>
     <select />
   </component>
@@ -86,7 +91,12 @@
         <serviceView>
           <option name="contentProportion" value="0.05564142" />
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -106,7 +116,9 @@
       <workItem from="1578816397695" duration="2660000" />
       <workItem from="1579214821227" duration="4055000" />
       <workItem from="1579230568224" duration="4008000" />
-      <workItem from="1579235694806" duration="1425000" />
+      <workItem from="1579235694806" duration="3507000" />
+      <workItem from="1579254983408" duration="2298000" />
+      <workItem from="1579260771923" duration="4863000" />
     </task>
     <servers />
   </component>
@@ -114,33 +126,65 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579235789741">
+    <state x="275" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579260607903">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1579235789741" />
-    <state width="1323" height="193" key="GridCell.Tab.0.bottom" timestamp="1579236353551">
+    <state x="275" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1579260607903" />
+    <state width="1323" height="193" key="GridCell.Tab.0.bottom" timestamp="1579265630645">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="193" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579236353551" />
-    <state width="1323" height="193" key="GridCell.Tab.0.center" timestamp="1579236353551">
+    <state width="1323" height="193" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579265630645" />
+    <state width="1323" height="193" key="GridCell.Tab.0.center" timestamp="1579265630644">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="193" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579236353551" />
-    <state width="1323" height="193" key="GridCell.Tab.0.left" timestamp="1579236353551">
+    <state width="1323" height="193" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579265630644" />
+    <state width="1323" height="193" key="GridCell.Tab.0.left" timestamp="1579265630644">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="193" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579236353551" />
-    <state width="1323" height="193" key="GridCell.Tab.0.right" timestamp="1579236353551">
+    <state width="1323" height="193" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579265630644" />
+    <state width="1323" height="193" key="GridCell.Tab.0.right" timestamp="1579265630644">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="193" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579236353551" />
+    <state width="1323" height="193" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579265630644" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1579264909062">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579264909062" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1579264909061">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1579264909061" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1579264909061">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1579264909061" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1579264909062">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1579264909062" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1579231924471">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1579231924471" />
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1579235693613">
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1579260772301">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1579235693613" />
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1579260772301" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/account/views.py</url>
+          <line>59</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Python.DjangoServer">
+        <watch expression="request" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
