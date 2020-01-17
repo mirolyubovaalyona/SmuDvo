@@ -49,6 +49,12 @@ class NewsForm(forms.ModelForm):
         fields = ['title', 'photo', 'text']
 
 
+class AdsForm(forms.ModelForm):
+    class Meta:
+        model = Ads
+        fields = ['title', 'photo', 'text']
+
+
 class ConferenceForm(forms.ModelForm):
     class Meta:
         model = Conference

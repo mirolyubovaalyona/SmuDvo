@@ -15,10 +15,19 @@ urlpatterns = [
     path('reset/done/', auth_views.PasswordResetCompleteView.as_view(), name='password_reset_complete'),
     path('register/', views.register, name='register'),
     path('edit', views.edit, name='edit'),
+    path('submit_an_application', views.submit_an_application, name='submit_an_application'),
     path('create_news/', views.create_news, name='create_news'),
     path('list_of_news', views.list_of_news, name='list_of_news'),
     path('delete_news/<int:id>/', views.delete_news),
     path('edit_news/<int:id>', views.edit_news),
+
+# реализовать
+    path('create_ads/', views.create_ads, name='create_ads'),
+    path('list_of_ads', views.list_of_ads, name='list_of_ads'),
+    path('delete_ads/<int:id>/', views.delete_ads),
+    path('edit_ads/<int:id>', views.edit_ads),
+# реализовать
+
     path('list_of_scientists', views.list_of_scientists, name='list_of_scientists'),
     path('delete_user/<int:id>/', views.delete_user),
     path('create_conference/', views.create_conference, name='create_conference'),
