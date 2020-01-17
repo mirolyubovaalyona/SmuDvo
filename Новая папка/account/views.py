@@ -2,9 +2,9 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login
 from .forms import LoginForm, UserRegistrationForm, UserEditForm, \
-    ProfileEditForm, EmailPostForm, NewsForm, ConferenceForm
+    ProfileEditForm, EmailPostForm, NewsForm, ConferenceForm, AdsForm
 from django.contrib.auth.decorators import login_required, permission_required
-from .models import Profile, News, Conference
+from .models import Profile, News, Conference, Ads
 from django.contrib import messages
 from django.core.mail import EmailMessage
 from django.conf import settings
@@ -122,6 +122,45 @@ def delete_news(request, id):
 def list_of_news(request):
     news = News.objects.all()
     return render(request, "news/list_of_news.html", {"news": news})
+
+
+############################## Объявления ##############################
+@permission_required('account.can_add')
+def create_ads(request):
+    if request.method == 'POST':
+        form = AdsForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/account')
+    else:
+        form = NewsForm()
+    return render(request, 'ads/create_ads.html', {'form': form})
+
+
+@permission_required('account.can_edit')
+def edit_ads(request, id):
+    n = Ads.objects.get(id=id)
+    if request.method == "POST":
+        form = AdsForm(data=request.POST, files=request.FILES, instance=n)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect("/account")
+    else:
+        form = AdsForm(instance=n)
+    return render(request, "ads/edit_ads.html", {"form": form})
+
+
+@permission_required('account.can_delete')
+def delete_ads(request, id):
+    new = Ads.objects.get(id=id)
+    new.delete()
+    return HttpResponseRedirect("/account")
+
+
+def list_of_ads(request):
+    ads = Ads.objects.all()
+    return render(request, "ads/list_of_ads.html", {"ads": ads})
+
 
 
 ############################## Конференции ##############################

@@ -18,6 +18,12 @@ class Profile(models.Model):
     user_submit = models.NullBooleanField(default=False)
 
 
+class Ads(models.Model):
+    title = models.CharField(max_length=200)
+    photo = models.ImageField(upload_to='ads/%Y/%m-%d/', blank=True)
+    text = models.TextField(default='')
+
+
 class News(models.Model):
     title = models.CharField(max_length=200)
     photo = models.ImageField(upload_to='news/%Y/%m-%d/', blank=True)

@@ -37,10 +37,31 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="account_ads: table" type="3d80ac25:SqliteImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="account_news: table" type="3d80ac25:SqliteImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
         <item name="collations" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
     <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="ProjectId" id="1WHpTbdmYGDrIpi6f9voBAIVoxD" />
   <component name="ProjectViewState">
@@ -49,6 +70,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -91,12 +113,7 @@
         <serviceView>
           <option name="contentProportion" value="0.05564142" />
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
@@ -118,7 +135,9 @@
       <workItem from="1579230568224" duration="4008000" />
       <workItem from="1579235694806" duration="3507000" />
       <workItem from="1579254983408" duration="2298000" />
-      <workItem from="1579260771923" duration="4863000" />
+      <workItem from="1579260771923" duration="9191000" />
+      <workItem from="1579272087568" duration="693000" />
+      <workItem from="1579272851361" duration="678000" />
     </task>
     <servers />
   </component>
@@ -130,46 +149,46 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1579260607903" />
-    <state width="1323" height="193" key="GridCell.Tab.0.bottom" timestamp="1579265630645">
+    <state width="1323" height="193" key="GridCell.Tab.0.bottom" timestamp="1579273525702">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="193" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579265630645" />
-    <state width="1323" height="193" key="GridCell.Tab.0.center" timestamp="1579265630644">
+    <state width="1323" height="193" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579273525702" />
+    <state width="1323" height="193" key="GridCell.Tab.0.center" timestamp="1579273525701">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="193" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579265630644" />
-    <state width="1323" height="193" key="GridCell.Tab.0.left" timestamp="1579265630644">
+    <state width="1323" height="193" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579273525701" />
+    <state width="1323" height="193" key="GridCell.Tab.0.left" timestamp="1579273525701">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="193" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579265630644" />
-    <state width="1323" height="193" key="GridCell.Tab.0.right" timestamp="1579265630644">
+    <state width="1323" height="193" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579273525701" />
+    <state width="1323" height="193" key="GridCell.Tab.0.right" timestamp="1579273525702">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="193" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579265630644" />
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1579264909062">
+    <state width="1323" height="193" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579273525702" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1579271742235">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579264909062" />
-    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1579264909061">
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579271742235" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1579271742234">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1579264909061" />
-    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1579264909061">
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1579271742234" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1579271742234">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1579264909061" />
-    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1579264909062">
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1579271742234" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1579271742235">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1579264909062" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1579271742235" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1579231924471">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1579231924471" />
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1579260772301">
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1579272853272">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1579260772301" />
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1579272853272" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
