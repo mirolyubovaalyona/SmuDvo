@@ -1,0 +1,105 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static "css/base.css" %}" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/css/global-styles.css">
+    <script src="../../static/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <a class="navbar-brand" href="http://127.0.0.1:8000/">Совет молодых ученых ДВО РАН</a>
+        {% if request.user.is_authenticated %}
+            <ul class="navbar-nav ml-auto">
+                <li {% if section == "dashboard" %} class="nav-item"{% endif %}>
+                    <form action="{% url "dashboard" %}">
+                        <button type="submit" class="button-link">Профиль</button>
+                    </form>
+                </li>
+                <form action="{% url "logout" %}">
+                    <button type="submit" class="button-link">Выйти</button>
+                </form>
+            </ul>
+        {% else %}
+            <ul class="navbar-nav ml-auto">
+                <button type="button" class="button-link" data-toggle="modal" data-target="#exampleModalScrollable1">Регистрация</button>
+            </ul>
+        {% endif %}
+    </nav>
+
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-sm" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalScrollableTitle" style="color: blue">Вход</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                   <div class="registration-form">
+                       <form action="{% url "login" %}?next={{ current_url }}" method="POST">
+                           {% csrf_token %}
+                           <p><input id="username-field" name="username" placeholder="Username"type="text" /></p>
+                           <p><input id="password-field" name="password" placeholder="Enter Password" type="password" /></p>
+                           <p><input type="submit" value="Войти"></p>
+                       </form>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade bd-example-modal-sm" id="exampleModalScrollable1" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalScrollableTitle" style="color: blue">Регистрация</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                    <div class="registration-form">
+                        <p style="color: blue">Пожалуйста, зарегистрируйтесь используя следующую форму:</p>
+                        <form action="{% url "register" %}?next={{ current_url }}" method="POST">
+                            {% csrf_token %}
+                            <p><input id="username" name="username" placeholder="Username"type="text" /></p>
+                            <p><input id="first_name" name="first_name" placeholder="First Name"type="text" /></p>
+                            <p><input id="last_name" name="last_name" placeholder="Last Name"type="text" /></p>
+                            <p><input id="email" name="email" placeholder="Email"type="text" /></p>
+                            <p><input id="password" name="password" placeholder="Enter Password"type="password" /></p>
+                            <p><input id="password2" name="password2" placeholder="Repeat Password"type="password" /></p>
+                            <p><input type="submit" value="Войти"></p>
+                        </form>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+    {% if messages %}
+        <ul class="messages">
+        {% for message in messages %}
+            <li class="{{ message.tags }}">
+                {{ message|safe }}
+                <a href="#" class="close">x</a>
+            </li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+
+    <div id="content">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+</body>
+</html>
