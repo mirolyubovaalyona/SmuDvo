@@ -7,5 +7,13 @@
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:C:\Users\79243\Documents\GitHub\SmuDvo\SmuDvo\db.sqlite3</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="Django default" uuid="7bca6d0b-38a5-4892-9eb8-594e3b81f863">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/SmuDvo/settings.py</remarks>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\79243\Documents\GitHub\SmuDvo\SmuDvo\db.sqlite3</jdbc-url>
+    </data-source>
   </component>
 </project>

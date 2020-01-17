@@ -10,7 +10,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SmuDvo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/SmuDvo/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SmuDvo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SmuDvo/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SmuDvo/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/SmuDvo/wsgi.py" afterDir="false" />
@@ -188,7 +187,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../SmuDvo" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
@@ -246,6 +245,7 @@
       <workItem from="1579241123648" duration="3028000" />
       <workItem from="1579254178378" duration="5633000" />
       <workItem from="1579276149305" duration="471000" />
+      <workItem from="1579276628979" duration="93000" />
     </task>
     <servers />
   </component>
@@ -265,30 +265,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="254" height="195" key="DatabaseViewActions_Filter/0.0.1366.728@0.0.1366.728" timestamp="1579241619847" />
-    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1579276625795">
+    <state x="437" y="0" width="440" height="732" key="FileChooserDialogImpl" timestamp="1579276721535">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579276625795" />
-    <state width="1323" height="2" key="GridCell.Tab.0.bottom" timestamp="1579276661373">
+    <state x="437" y="0" width="440" height="732" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579276721535" />
+    <state width="1323" height="2" key="GridCell.Tab.0.bottom" timestamp="1579276722470">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="2" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579276661373" />
-    <state width="1323" height="2" key="GridCell.Tab.0.center" timestamp="1579276661372">
+    <state width="1323" height="2" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579276722470" />
+    <state width="1323" height="2" key="GridCell.Tab.0.center" timestamp="1579276722470">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="2" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579276661372" />
-    <state width="1323" height="2" key="GridCell.Tab.0.left" timestamp="1579276661372">
+    <state width="1323" height="2" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579276722470" />
+    <state width="1323" height="2" key="GridCell.Tab.0.left" timestamp="1579276722470">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="2" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579276661372" />
-    <state width="1323" height="2" key="GridCell.Tab.0.right" timestamp="1579276661372">
+    <state width="1323" height="2" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579276722470" />
+    <state width="1323" height="2" key="GridCell.Tab.0.right" timestamp="1579276722470">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="2" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579276661372" />
+    <state width="1323" height="2" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579276722470" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1579275830063">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1579275830063" />
+    <state x="129" y="61" key="MergeDialog" timestamp="1579276688083">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="129" y="61" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1579276688083" />
+    <state x="395" y="81" key="MultipleFileMergeDialog" timestamp="1579276688093">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="395" y="81" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1579276688093" />
     <state x="184" y="7" key="SettingsEditor" timestamp="1579236829933">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
