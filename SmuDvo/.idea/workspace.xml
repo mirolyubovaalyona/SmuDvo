@@ -2,23 +2,138 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c41ff73e-72fe-47b7-8f0f-becda85a7406" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SmuDvo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SmuDvo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/79243.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SmuDvo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/SmuDvo/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SmuDvo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SmuDvo/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmuDvo/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/SmuDvo/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/authentication.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/authentication.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/static/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/account/static/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/templates/account/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/account/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/templates/account/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/account/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/templates/account/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/account/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/templates/account/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/account/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/templates/account/register_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/account/register_done.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/templates/conference/create_conference.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/conference/create_conference.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/templates/conference/edit_conference.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/conference/edit_conference.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/templates/conference/list_of_conference.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/conference/list_of_conference.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/templates/email/email.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/email/email.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/templates/news/create_news.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/news/create_news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/templates/news/edit_news.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/news/edit_news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/templates/news/list_of_news.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/news/list_of_news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/templates/registration/logged_out.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/registration/logged_out.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/templates/registration/password_change_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/registration/password_change_done.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/templates/registration/password_change_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/registration/password_change_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/templates/registration/password_reset_complete.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/registration/password_reset_complete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/templates/registration/password_reset_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/registration/password_reset_confirm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/templates/registration/password_reset_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/registration/password_reset_done.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/templates/registration/password_reset_email.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/registration/password_reset_email.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/templates/registration/password_reset_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/registration/password_reset_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/templates/scientists/list_of_scientists.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/scientists/list_of_scientists.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/news/2020/01-16/15544948333790.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/news/2020/01-16/nene1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/users/2020/01-17/aab087821373b7bd481160708d91183bb453522a_hq.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainPage/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainPage/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainPage/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainPage/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainPage/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainPage/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainPage/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/mainPage/static/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainPage/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainPage/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainPage/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainPage/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainPage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainPage/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainPage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainPage/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls/apps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/polls/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/send_email/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/send_email/templates/success.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/send_email/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/send_email/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/send_email/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/send_email/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/send_email/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/send_email/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/send_email/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/send_email/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/send_email/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/send_email/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/send_email/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/global-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/global-styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/.idea/dataSources/f9d93ba4-03b3-46e6-a3cf-7adf346a59c9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/.idea/dataSources/f9d93ba4-03b3-46e6-a3cf-7adf346a59c9.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/.idea/smudvo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/.idea/smudvo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/SmuDvo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/SmuDvo/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/SmuDvo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/SmuDvo/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/SmuDvo/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/SmuDvo/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/authentication.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/authentication.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/static/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/static/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/templates/account/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/templates/account/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/templates/account/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/templates/account/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/templates/account/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/templates/account/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/templates/account/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/templates/account/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/templates/account/register_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/templates/account/register_done.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/templates/conference/create_conference.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/templates/conference/create_conference.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/templates/conference/edit_conference.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/templates/conference/edit_conference.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/templates/conference/list_of_conference.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/templates/conference/list_of_conference.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/templates/email/email.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/templates/email/email.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/templates/news/create_news.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/templates/news/create_news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/templates/news/edit_news.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/templates/news/edit_news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/templates/news/list_of_news.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/templates/news/list_of_news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/templates/registration/logged_out.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/templates/registration/logged_out.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/templates/registration/password_change_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/templates/registration/password_change_done.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/templates/registration/password_change_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/templates/registration/password_change_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/templates/registration/password_reset_complete.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/templates/registration/password_reset_complete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/templates/registration/password_reset_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/templates/registration/password_reset_confirm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/templates/registration/password_reset_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/templates/registration/password_reset_done.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/templates/registration/password_reset_email.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/templates/registration/password_reset_email.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/templates/registration/password_reset_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/templates/registration/password_reset_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/templates/scientists/list_of_scientists.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/templates/scientists/list_of_scientists.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/account/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/mainPage/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/mainPage/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/mainPage/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/mainPage/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/mainPage/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/mainPage/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/mainPage/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/mainPage/static/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/mainPage/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/mainPage/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/mainPage/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/mainPage/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/mainPage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/mainPage/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/mainPage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/mainPage/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/static/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/static/css/bootstrap-grid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/static/css/bootstrap-grid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/static/css/bootstrap-grid.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/static/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/static/css/bootstrap-reboot.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/static/css/bootstrap-reboot.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/static/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/static/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/static/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/static/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/static/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/static/css/global-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/static/css/global-styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/static/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/static/js/bootstrap.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/static/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/static/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/static/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/static/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Новая папка/static/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Новая папка/static/js/bootstrap.min.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +164,8 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="db" type="feb32156:DbDataSourceImpl" />
-        <item name="collations" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
       </path>
     </expand>
     <select />
@@ -59,6 +175,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1WVYw5pAbPjNK7Ha7zfM3Wn1eg2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -105,17 +222,7 @@
       <list>
         <serviceView>
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@363464c0" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
@@ -137,6 +244,8 @@
       <workItem from="1579236702995" duration="10000" />
       <workItem from="1579236754894" duration="264000" />
       <workItem from="1579241123648" duration="3028000" />
+      <workItem from="1579254178378" duration="5633000" />
+      <workItem from="1579276149305" duration="471000" />
     </task>
     <servers />
   </component>
@@ -144,41 +253,53 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579241840248">
+    <state x="275" y="23" key="#Inspections" timestamp="1579274354979">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1579241840248" />
+    <state x="275" y="23" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1579274354979" />
+    <state x="275" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579276195694">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1579276195694" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1579241619847">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="254" height="195" key="DatabaseViewActions_Filter/0.0.1366.728@0.0.1366.728" timestamp="1579241619847" />
-    <state width="905" height="310" key="GridCell.Tab.0.bottom" timestamp="1579243120652">
+    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1579276625795">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="310" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579243120652" />
-    <state width="905" height="310" key="GridCell.Tab.0.center" timestamp="1579243120652">
+    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579276625795" />
+    <state width="1323" height="2" key="GridCell.Tab.0.bottom" timestamp="1579276661373">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="310" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579243120652" />
-    <state width="905" height="310" key="GridCell.Tab.0.left" timestamp="1579243120652">
+    <state width="1323" height="2" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579276661373" />
+    <state width="1323" height="2" key="GridCell.Tab.0.center" timestamp="1579276661372">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="310" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579243120652" />
-    <state width="905" height="310" key="GridCell.Tab.0.right" timestamp="1579243120652">
+    <state width="1323" height="2" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579276661372" />
+    <state width="1323" height="2" key="GridCell.Tab.0.left" timestamp="1579276661372">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="310" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579243120652" />
-    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1579241607284">
+    <state width="1323" height="2" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579276661372" />
+    <state width="1323" height="2" key="GridCell.Tab.0.right" timestamp="1579276661372">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1579241607284" />
+    <state width="1323" height="2" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579276661372" />
+    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1579275830063">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1579275830063" />
     <state x="184" y="7" key="SettingsEditor" timestamp="1579236829933">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1579236829933" />
-    <state x="378" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1579241533936">
+    <state x="378" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1579254179480">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="378" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1579241533936" />
+    <state x="378" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1579254179480" />
+    <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579276675534">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1579276675534" />
   </component>
 </project>
