@@ -2,9 +2,9 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login
 from .forms import LoginForm, UserRegistrationForm, UserEditForm, \
-    ProfileEditForm, EmailPostForm, NewsForm, ConferenceForm
+    ProfileEditForm, EmailPostForm, NewsForm, ConferenceForm, AdsForm
 from django.contrib.auth.decorators import login_required, permission_required
-from .models import Profile, News, Conference
+from .models import Profile, News, Conference, Ads
 from django.contrib import messages
 from django.core.mail import EmailMessage
 from django.conf import settings
@@ -56,6 +56,16 @@ def register(request):
                   {'user_form': user_form})
 
 
+def submit_an_application(request):
+    user = request.user.profile
+    profile_form = ProfileEditForm(instance=request.user.profile, data=request.POST, files=request.FILES)
+    # user = Profile.objects.get(id=id)
+    if not user.user_submit:
+        user.user_submit = True
+    user.save()
+    return HttpResponseRedirect("/account")
+
+
 @login_required
 def edit(request):
     if request.method == 'POST':
@@ -74,6 +84,7 @@ def edit(request):
                   'account/edit.html',
                   {'user_form': user_form,
                    'profile_form': profile_form})
+
 
 ############################## Новости ##############################
 @permission_required('account.can_add')
@@ -112,6 +123,46 @@ def list_of_news(request):
     news = News.objects.all()
     return render(request, "news/list_of_news.html", {"news": news})
 
+
+############################## Объявления ##############################
+@permission_required('account.can_add')
+def create_ads(request):
+    if request.method == 'POST':
+        form = AdsForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/account')
+    else:
+        form = NewsForm()
+    return render(request, 'ads/create_ads.html', {'form': form})
+
+
+@permission_required('account.can_edit')
+def edit_ads(request, id):
+    n = Ads.objects.get(id=id)
+    if request.method == "POST":
+        form = AdsForm(data=request.POST, files=request.FILES, instance=n)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect("/account")
+    else:
+        form = AdsForm(instance=n)
+    return render(request, "ads/edit_ads.html", {"form": form})
+
+
+@permission_required('account.can_delete')
+def delete_ads(request, id):
+    new = Ads.objects.get(id=id)
+    new.delete()
+    return HttpResponseRedirect("/account")
+
+
+def list_of_ads(request):
+    ads = Ads.objects.all()
+    return render(request, "ads/list_of_ads.html", {"ads": ads})
+
+
+
 ############################## Конференции ##############################
 @permission_required('account.can_add')
 def create_conference(request):
@@ -147,6 +198,7 @@ def list_of_conference(request):
     conference = Conference.objects.all()
     return render(request, "conference/list_of_conference.html", {"conference": conference})
 
+
 ############################## Список пользователей ##############################
 @permission_required('account.can_view')
 def list_of_scientists(request):
@@ -163,17 +215,23 @@ def delete_user(request, id):
 
 ############################## Список ученых ##############################
 @permission_required('account.can_edit')
-def add_to_scientists(request, id):
+def add_to_scientists(request, id):  ##добавление в совет
     user = Profile.objects.get(id=id)
     user.scientist = True
+    # user.user_is_reject = False
     user.save()
     return HttpResponseRedirect("/account")
 
 
 @permission_required('account.can_edit')
-def delete_from_scientists(request, id):
+def delete_from_scientists(request, id):  ##удаление из совета
     user = Profile.objects.get(id=id)
-    user.scientist = False
+    if not user.user_is_reject and user.scientist:
+        user.scientist = False
+        user.user_is_reject = False
+    elif not user.user_is_reject:
+        user.user_is_reject = True
+        user.user_submit = False
     user.save()
     return HttpResponseRedirect("/account")
 
@@ -201,3 +259,10 @@ def post_email(request):
     else:
         form = EmailPostForm()
     return render(request, 'email/email.html', {'form': form})
+
+
+# @permission_required('account.can_edit')
+# def submit_an_application(request, id ):
+#     user = Profile.objects.get(id=id)
+#     if not user.user_submit:
+#         user.user_submit = True

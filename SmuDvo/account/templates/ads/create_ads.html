@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Создание объявления</title>
+    <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
+</head>
+<body>
+    <div style="margin: 80px">
+        <h1 class="text-center">Создание объявления</h1> <br>
+        <form method = "post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table class="table table-bordered">
+            <tbody>
+                {% for field in form %}
+                    <tr>
+                        <th scope="row">
+                            <h5 class="text-md-center">{{field.label_tag}}</h5>
+                        </th>
+                        <td class="col-md-10">
+                                {{field}}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button type="submit" class="btn btn-success float-left">Опубликовать объявление</button>
+    </form>
+    </div>
+</body>
+</html>
