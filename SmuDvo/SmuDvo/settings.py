@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'mainPage.apps.MainPageConfig',
     'account.apps.AccountConfig',
+    'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -100,7 +101,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-RU'
 
 TIME_ZONE = 'UTC'
 
@@ -136,3 +137,8 @@ EMAIL_HOST_USER = 'smu.dvo.ru@gmail.com'
 EMAIL_HOST_PASSWORD = 'c2707272wht[['
 EMAIL_PORT = 587
 
+# Кол-во голосов, при котором пост в админке становится Популярным
+POLLS_POPULAR_VOTES_LIMIT = 100
+
+IMG_TRUE_PATH = '/static/admin/img/icon-yes.gif'
+IMG_FALSE_PATH = '/static/admin/img/icon-no.gif'

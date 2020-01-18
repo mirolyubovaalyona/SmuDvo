@@ -22,7 +22,7 @@
     <tbody>
         {% for user in users %}
             <tr>
-            {% if user.scientist == False and user.user_is_reject == False %}
+            {% if user.scientist == False and user.user_is_reject == False and user.user_submit %}
                 <th scope="row">
                     {{ user.user.id }}
                 </th>

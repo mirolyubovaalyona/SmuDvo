@@ -7,6 +7,7 @@ from django.views.generic import RedirectView
 from django.conf.urls import url
 
 urlpatterns = [
+    #path('poll', include('polls.urls')),
     path('admin/', admin.site.urls),
     path('account/', include('account.urls')),
     path('', include('mainPage.urls')),

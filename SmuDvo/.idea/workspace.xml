@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c41ff73e-72fe-47b7-8f0f-becda85a7406" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/79243.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmuDvo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/SmuDvo/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmuDvo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SmuDvo/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/news/2020/01-16/15544948333790.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/news/2020/01-16/nene1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/users/2020/01-17/aab087821373b7bd481160708d91183bb453522a_hq.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/send_email/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/send_email/templates/success.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/send_email/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/send_email/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/send_email/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="8b36006a-b771-4745-b935-cfaf23f6fcf7" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +31,8 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="db" type="feb32156:DbDataSourceImpl" />
-        <item name="collations" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
       </path>
     </expand>
     <select />
@@ -57,22 +40,36 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
-  <component name="ProjectId" id="1WVYw5pAbPjNK7Ha7zfM3Wn1eg2" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1WX6AudZHAioXKmpBQw8IDSWAXQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/SmuDvo--/SmuDvo" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\79243\Desktop\проэкт\SmuDvo\polls" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\79243\Desktop\проэкт\SmuDvo\polls\templates" />
+      <recent name="C:\Users\79243\Desktop\проэкт\SmuDvo\send_email" />
+      <recent name="C:\Users\79243\Desktop\проэкт\SmuDvo\polls" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="SmuDvo" type="Python.DjangoServer" factoryName="Django server">
@@ -100,43 +97,26 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@363464c0" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-            </expand>
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c41ff73e-72fe-47b7-8f0f-becda85a7406" name="Default Changelist" comment="" />
-      <created>1579236464444</created>
+      <changelist id="8b36006a-b771-4745-b935-cfaf23f6fcf7" name="Default Changelist" comment="" />
+      <created>1579283462280</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1579236464444</updated>
-      <workItem from="1579236465961" duration="44000" />
-      <workItem from="1579236597134" duration="61000" />
-      <workItem from="1579236702995" duration="10000" />
-      <workItem from="1579236754894" duration="264000" />
-      <workItem from="1579241123648" duration="3028000" />
+      <updated>1579283462280</updated>
+      <workItem from="1579283515400" duration="1706000" />
+      <workItem from="1579286389861" duration="659000" />
+      <workItem from="1579287162667" duration="12000" />
+      <workItem from="1579287375952" duration="182000" />
+      <workItem from="1579287720575" duration="4120000" />
+      <workItem from="1579291938141" duration="4084000" />
+      <workItem from="1579296078536" duration="208000" />
+      <workItem from="1579296452512" duration="286000" />
+      <workItem from="1579296852654" duration="1447000" />
+      <workItem from="1579317360309" duration="945000" />
     </task>
     <servers />
   </component>
@@ -144,41 +124,45 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579241840248">
+    <state x="402" y="32" key="#SmuDvo" timestamp="1579283805514">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1579241840248" />
-    <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1579241619847">
+    <state x="402" y="32" key="#SmuDvo/0.0.1366.728@0.0.1366.728" timestamp="1579283805514" />
+    <state x="275" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579289741385">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="254" height="195" key="DatabaseViewActions_Filter/0.0.1366.728@0.0.1366.728" timestamp="1579241619847" />
-    <state width="905" height="310" key="GridCell.Tab.0.bottom" timestamp="1579243120652">
+    <state x="275" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1579289741385" />
+    <state x="290" y="0" width="961" height="728" key="FileChooserDialogImpl" timestamp="1579317314398">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="310" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579243120652" />
-    <state width="905" height="310" key="GridCell.Tab.0.center" timestamp="1579243120652">
+    <state x="290" y="0" width="961" height="728" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579317314398" />
+    <state width="1323" height="2" key="GridCell.Tab.0.bottom" timestamp="1579318367096">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="310" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579243120652" />
-    <state width="905" height="310" key="GridCell.Tab.0.left" timestamp="1579243120652">
+    <state width="1323" height="2" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579318367096" />
+    <state width="1323" height="2" key="GridCell.Tab.0.center" timestamp="1579318367096">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="310" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579243120652" />
-    <state width="905" height="310" key="GridCell.Tab.0.right" timestamp="1579243120652">
+    <state width="1323" height="2" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579318367096" />
+    <state width="1323" height="2" key="GridCell.Tab.0.left" timestamp="1579318367096">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="310" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579243120652" />
-    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1579241607284">
+    <state width="1323" height="2" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579318367096" />
+    <state width="1323" height="2" key="GridCell.Tab.0.right" timestamp="1579318367096">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1579241607284" />
-    <state x="184" y="7" key="SettingsEditor" timestamp="1579236829933">
+    <state width="1323" height="2" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579318367096" />
+    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1579289744015">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1579236829933" />
-    <state x="378" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1579241533936">
+    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1579289744015" />
+    <state x="184" y="7" key="SettingsEditor" timestamp="1579288051722">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="378" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1579241533936" />
+    <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1579288051722" />
+    <state x="378" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1579317555183">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="378" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1579317555183" />
   </component>
 </project>

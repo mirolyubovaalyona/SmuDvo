@@ -15,6 +15,13 @@ class Profile(models.Model):
     bio = models.TextField(default='')
     scientist = models.NullBooleanField(default=False)
     user_is_reject = models.NullBooleanField(default=False)
+    user_submit = models.NullBooleanField(default=False)
+
+
+class Ads(models.Model):
+    title = models.CharField(max_length=200)
+    photo = models.ImageField(upload_to='ads/%Y/%m-%d/', blank=True)
+    text = models.TextField(default='')
 
 
 class News(models.Model):
