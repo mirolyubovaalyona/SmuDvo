@@ -134,6 +134,9 @@
                 <a href="#news">Новости</a>
             </div>
             <div class="col-sm-12 col-md">
+                <a href="#ads">Объявления</a>
+            </div>
+            <div class="col-sm-12 col-md">
                 <a href="#conferences">Конференции</a>
             </div>
         </div>
@@ -200,6 +203,23 @@
                 <p class="text-justify px-2" style="text-indent: 50px">{{ this_news.text }}</p>
             {% endfor %}
         </div>
+{#    объявления#}
+    <div id="ads" class="mt-5">
+            <h2>Объявления</h2>
+            {% for this_ads in ads %}
+                <div class="text-center">
+                    <hr>
+                    <h4 class="text-justify">{{ this_ads.title }}</h4>
+                    <br>
+{#                    {% if this_ads.photo %}#}
+{#                        <img class="img-fluid rounded" src="{{ this_ads.photo.url }}" alt="{{ this_ads.title }}">#}
+{#                    {% endif %}#}
+                </div>
+                <br>
+                <p class="text-justify px-2" style="text-indent: 50px">{{ this_ads.text }}</p>
+            {% endfor %}
+        </div>
+{#    объявления#}
         <!-- Конференции -->
         <div id="conferences" class="mt-5">
             <h2>Конференции</h2>
