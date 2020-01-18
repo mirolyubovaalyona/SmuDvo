@@ -11,11 +11,26 @@ class Profile(models.Model):
     bio = models.TextField(default='')
     scientist = models.NullBooleanField(default=False)
 
+    def __unicode__(self):
+        return self.user
+
+    class Meta:
+        verbose_name = 'Профиль'
+        verbose_name_plural = 'Профили'
+
 
 class News(models.Model):
     title = models.CharField(max_length=200)
     photo = models.ImageField(upload_to='news/%Y/%m-%d/', blank=True)
     text = models.TextField(default='')
+
+    def __unicode__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Новость'
+        verbose_name_plural = 'Новости'
+
 
 
 class Conference(models.Model):
@@ -23,3 +38,11 @@ class Conference(models.Model):
     text = models.TextField(default='')
     date = models.CharField(max_length=100)
     place = models.CharField(max_length=200)
+
+    def __unicode__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Конференция'
+        verbose_name_plural = 'Конференции'
+
