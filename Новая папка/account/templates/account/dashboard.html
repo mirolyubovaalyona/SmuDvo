@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    <h1>Главная страница</h1>
+    {% if not user.is_superuser %}
+        <p><a href="{% url "edit" %}">Изменить данные профиля </a> </p>
+        {% if not uset.profile.user_submit %}
+            <p><a href="{% url "submit_an_application" %}">Подать заявку на вступление в совет </a> </p>
+        {% endif %}
+        ##############?????????????????????????????####################
+        {% if uset.profile.user_submit %}
+            <p>Заявка отправлена, ожидание результата </p>
+        {% endif %}
+        ##############?????????????????????????????####################
+    {% endif %}
+        <p><a href="{% url "password_change" %}">Изменить пароль</a></p>
+    {% if user.is_superuser %}
+        <hr>
+        <p><a href="{% url "list_of_news" %}">Новости</a></p>
+        <p><a href="{% url "create_news" %}">Добавить новость</a></p>
+        <p><a href="{% url "list_of_ads" %}">Объявления</a></p>
+        <p><a href="{% url "create_ads" %}">Добавить объявление</a></p>
+        <p><a href="{% url "list_of_conference" %}">Конференции</a></p>
+        <p><a href="{% url "create_conference" %}">Добавить конференцию</a></p>
+        <p><a href="{% url "list_of_scientists" %}">Управление пользователями</a></p>
+        <p><a href="{% url "post_email" %}">Отправить письмо</a></p>
+    {% endif %}
+{% endblock %}

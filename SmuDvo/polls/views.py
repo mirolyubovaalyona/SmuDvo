@@ -9,3 +9,6 @@ class IndexView(ListView):
     def get_queryset(self):
         """Вернуть 2 последних свежих опроса"""
         return Question.objects.order_by('-date_published')[:2]
+
+def index(request):
+    return render(request, 'list_of_polls.html')
