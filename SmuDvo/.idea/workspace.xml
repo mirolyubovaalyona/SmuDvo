@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c847872a-e1fd-481b-8f03-65382d9d3050" name="Default Changelist" comment="" />
+    <list default="true" id="8b36006a-b771-4745-b935-cfaf23f6fcf7" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,18 +34,6 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="db" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="account_news: table" type="3d80ac25:SqliteImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="db" type="feb32156:DbDataSourceImpl" />
-        <item name="collations" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
     </expand>
     <select />
   </component>
@@ -55,11 +43,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Python Script" />
         <option value="HTML File" />
       </list>
     </option>
   </component>
-  <component name="ProjectId" id="1WHpTbdmYGDrIpi6f9voBAIVoxD" />
+  <component name="ProjectId" id="1WX6AudZHAioXKmpBQw8IDSWAXQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -69,38 +58,22 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/SmuDvo-it_work/SmuDvo-it_work/SmuDvo" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Django server.smudvo">
-    <configuration name="Test: " type="DjangoTestsConfigurationType" temporary="true">
-      <module name="smudvo" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="smudvo" type="Python.DjangoServer" factoryName="Django server">
-      <module name="smudvo" />
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\79243\Desktop\проэкт\SmuDvo\polls" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\79243\Desktop\проэкт\SmuDvo\polls\templates" />
+      <recent name="C:\Users\79243\Desktop\проэкт\SmuDvo\send_email" />
+      <recent name="C:\Users\79243\Desktop\проэкт\SmuDvo\polls" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="SmuDvo" type="Python.DjangoServer" factoryName="Django server">
+      <module name="SmuDvo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -123,57 +96,28 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Django tests.Test: " />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <option name="contentProportion" value="0.05564142" />
-          <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@5a33fe82" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-            </expand>
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c847872a-e1fd-481b-8f03-65382d9d3050" name="Default Changelist" comment="" />
-      <created>1578816382452</created>
+      <changelist id="8b36006a-b771-4745-b935-cfaf23f6fcf7" name="Default Changelist" comment="" />
+      <created>1579283462280</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1578816382452</updated>
-      <workItem from="1578816397695" duration="2660000" />
-      <workItem from="1579214821227" duration="4055000" />
-      <workItem from="1579230568224" duration="4008000" />
-      <workItem from="1579235694806" duration="3507000" />
-      <workItem from="1579254983408" duration="2298000" />
-      <workItem from="1579260771923" duration="9191000" />
-      <workItem from="1579272087568" duration="693000" />
-      <workItem from="1579272851361" duration="2421000" />
-      <workItem from="1579307995332" duration="658000" />
-      <workItem from="1579308705283" duration="1511000" />
-      <workItem from="1579310837806" duration="2765000" />
-      <workItem from="1579316422719" duration="2090000" />
+      <updated>1579283462280</updated>
+      <workItem from="1579283515400" duration="1706000" />
+      <workItem from="1579286389861" duration="659000" />
+      <workItem from="1579287162667" duration="12000" />
+      <workItem from="1579287375952" duration="182000" />
+      <workItem from="1579287720575" duration="4120000" />
+      <workItem from="1579291938141" duration="4084000" />
+      <workItem from="1579296078536" duration="208000" />
+      <workItem from="1579296452512" duration="286000" />
+      <workItem from="1579296852654" duration="1447000" />
+      <workItem from="1579317360309" duration="945000" />
+      <workItem from="1579319440858" duration="75000" />
     </task>
     <servers />
   </component>
@@ -181,76 +125,45 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579308729906">
+    <state x="402" y="32" key="#SmuDvo" timestamp="1579283805514">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1579308729906" />
-    <state x="463" y="91" key="FileChooserDialogImpl" timestamp="1579317541849">
+    <state x="402" y="32" key="#SmuDvo/0.0.1366.728@0.0.1366.728" timestamp="1579283805514" />
+    <state x="275" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579289741385">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="91" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579317541849" />
-    <state width="1323" height="204" key="GridCell.Tab.0.bottom" timestamp="1579318544893">
+    <state x="275" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1579289741385" />
+    <state x="290" y="0" width="961" height="728" key="FileChooserDialogImpl" timestamp="1579319513908">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="204" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579318544893" />
-    <state width="1323" height="204" key="GridCell.Tab.0.center" timestamp="1579318544892">
+    <state x="290" y="0" width="961" height="728" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579319513908" />
+    <state width="1323" height="2" key="GridCell.Tab.0.bottom" timestamp="1579318367096">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="204" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579318544892" />
-    <state width="1323" height="204" key="GridCell.Tab.0.left" timestamp="1579318544892">
+    <state width="1323" height="2" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579318367096" />
+    <state width="1323" height="2" key="GridCell.Tab.0.center" timestamp="1579318367096">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="204" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579318544892" />
-    <state width="1323" height="204" key="GridCell.Tab.0.right" timestamp="1579318544893">
+    <state width="1323" height="2" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579318367096" />
+    <state width="1323" height="2" key="GridCell.Tab.0.left" timestamp="1579318367096">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="204" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579318544893" />
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1579271742235">
+    <state width="1323" height="2" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579318367096" />
+    <state width="1323" height="2" key="GridCell.Tab.0.right" timestamp="1579318367096">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579271742235" />
-    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1579271742234">
+    <state width="1323" height="2" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579318367096" />
+    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1579289744015">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1579271742234" />
-    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1579271742234">
+    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1579289744015" />
+    <state x="184" y="7" key="SettingsEditor" timestamp="1579288051722">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1579271742234" />
-    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1579271742235">
+    <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1579288051722" />
+    <state x="378" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1579319473573">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1579271742235" />
-    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1579316850453">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1579316850453" />
-    <state x="184" y="7" key="SettingsEditor" timestamp="1579317525773">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1579317525773" />
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1579316443558">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1579316443558" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/account/views.py</url>
-          <line>59</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Python.DjangoServer">
-        <watch expression="request" />
-      </configuration>
-    </watches-manager>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/smudvo$Test__.coverage" NAME="Test:  Coverage Results" MODIFIED="1579318151074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <state x="378" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1579319473573" />
   </component>
 </project>

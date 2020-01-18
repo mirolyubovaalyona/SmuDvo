@@ -7,5 +7,4 @@ def index(request):
     conference = Conference.objects.all()
     news = News.objects.all()
     users = Profile.objects.all()
-    ads = Ads.objects.all()
-    return render(request, "index.html", {"users": users, "news": news, "conference": conference, "ads": ads})
+    return render(request, "index.html", {"users": users, "news": news, "conference": conference})
