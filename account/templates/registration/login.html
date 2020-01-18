@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Регистрация{% endblock %}
+
+{% block content %}
+    <h1>Вход</h1>
+    {% if form.errors %}
+        <p>Пожалуйста, введите правильное имя пользователя и пароль. Учтите что оба поля могут быть чувствительны к регистру.</p>
+    {% else %}
+        <p>Используйте следующую форму для входа. Если у вас нет аккаунта, <a href="{% url "register" %}">зарегистрируйтесь здесь.</a></p>
+    {% endif %}
+    <div class="login-form">
+        <form action="{% url 'login' %}" method="post">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ request.GET.next }}"/>
+            <p><input type="submit" value="Войти"></p>
+        </form>
+        <a href="{% url "password_reset" %}">Забыль пароль?</a>
+    </div>
+{% endblock %}
