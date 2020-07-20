@@ -4,6 +4,10 @@ from . import views
 from django.conf import settings
 
 urlpatterns = [
+# posts
+    path('blog/', views.blog_view, name='blog'),
+    path('<int:id>/', views.detail_view, name='detail'),
+
     path('login/', auth_views.LoginView.as_view(), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('', views.dashboard, name='dashboard'),
@@ -19,7 +23,16 @@ urlpatterns = [
     path('create_news/', views.create_news, name='create_news'),
     path('list_of_news', views.list_of_news, name='list_of_news'),
     path('delete_news/<int:id>/', views.delete_news),
-    path('edit_news/<int:id>', views.edit_news),
+
+
+
+# голосование
+    path('vote/', views.home, name='home'),
+    path('vote/create/', views.create, name='create'),
+    path('vote/results/<poll_id>/', views.results, name='results'),
+    path('vote/vote/<poll_id>/', views.vote, name='vote'),
+    path('vote/delete/<poll_id>/', views.delete, name='delete'),
+# голосование
 
 # реализовать
     path('create_ads/', views.create_ads, name='create_ads'),

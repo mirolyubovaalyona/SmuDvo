@@ -24,6 +24,11 @@
                 {% endfor %}
             </tbody>
         </table>
+        {{ images.management_form }}
+        {% for form in images %}
+        {{ form }}
+        {% endfor %}
+
         <button type="submit" class="btn btn-success float-left">Загрузить новость</button>
     </form>
     </div>

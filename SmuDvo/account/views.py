@@ -1,13 +1,120 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login
 from .forms import LoginForm, UserRegistrationForm, UserEditForm, \
     ProfileEditForm, EmailPostForm, NewsForm, ConferenceForm, AdsForm
 from django.contrib.auth.decorators import login_required, permission_required
-from .models import Profile, News, Conference, Ads
+from .models import Profile, News, Conference, Ads, Poll
 from django.contrib import messages
 from django.core.mail import EmailMessage
+from .forms import CreatePollForm
+from django.shortcuts import redirect
 from django.conf import settings
+from django.core.mail import send_mail
+from django.shortcuts import render
+from django.forms import modelformset_factory
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+from django.http import HttpResponseRedirect
+from .forms import NewsForm, ImagesForm
+from .models import Images
+
+from django.shortcuts import render
+from django.http import HttpResponseRedirect, JsonResponse
+from django.urls import reverse_lazy
+import datetime
+from django.db.models import Q
+from django.views.generic import ListView
+
+
+from .models import Post, PostImage
+
+def blog_view(request):
+    posts = Post.objects.all()
+    return render(request, 'blog.html', {'posts':posts})
+
+def detail_view(request, id):
+    post = get_object_or_404(Post, id=id)
+    photos = PostImage.objects.filter(post=post)
+    return render(request, 'detail.html', {
+        'post':post,
+        'photos':photos
+    })
+
+
+
+
+############################ Голосование ###########################
+
+def delete(request, poll_id):
+    try:
+        poll = Poll.objects.get(id=poll_id)
+        poll.delete()
+        return home(request)
+    except Poll.DoesNotExist:
+        return home(request)
+
+
+def home(request):
+    polls = Poll.objects.all()
+
+    context = {
+        'polls': polls
+    }
+    return render(request, 'poll/home.html', context)
+
+
+def create(request):
+    if request.method == 'POST':
+        form = CreatePollForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+
+            return redirect('home')
+    else:
+        form = CreatePollForm()
+
+    context = {'form': form}
+    return render(request, 'poll/create.html', context)
+
+
+def results(request, poll_id):
+    poll = Poll.objects.get(pk=poll_id)
+
+    context = {
+        'poll': poll
+    }
+    return render(request, 'poll/results.html', context)
+
+
+def vote(request, poll_id):
+    poll = Poll.objects.get(pk=poll_id)
+
+    if request.method == 'POST':
+
+        selected_option = request.POST['poll']
+        if selected_option == 'option1':
+            poll.option_one_count += 1
+        elif selected_option == 'option2':
+            poll.option_two_count += 1
+        elif selected_option == 'option3':
+            poll.option_three_count += 1
+        else:
+            return HttpResponse(400, 'Invalid form option')
+
+        poll.save()
+
+        return redirect('results', poll.id)
+
+    context = {
+        'poll': poll
+    }
+    return render(request, 'poll/vote.html', context)
+
+
+# from django.core.mail import EmailMessage
+# from django.conf import settings
 
 
 ############################## Аккаунт ##############################
@@ -91,17 +198,23 @@ def edit(request):
 def create_news(request):
     if request.method == 'POST':
         form = NewsForm(request.POST, request.FILES)
-        if form.is_valid():
+        images = ImagesForm(request.POST, request.FILES,
+                               queryset=Images.objects.none())
+        if form.is_valid() and images.is_valid():
             form.save()
+            images.save()
             return HttpResponseRedirect('/account')
     else:
         form = NewsForm()
-    return render(request, 'news/create_news.html', {'form': form})
+        images = ImagesForm()
+    return render(request, 'news/create_news.html', {'form': form, 'images': images})
 
 
 @permission_required('account.can_edit')
 def edit_news(request, id):
     n = News.objects.get(id=id)
+    news = get_object_or_404(News, id=id)
+    images = Images.objects.filter(news=news)
     if request.method == "POST":
         form = NewsForm(data=request.POST, files=request.FILES, instance=n)
         if form.is_valid():
@@ -109,7 +222,8 @@ def edit_news(request, id):
             return HttpResponseRedirect("/account")
     else:
         form = NewsForm(instance=n)
-    return render(request, "news/edit_news.html", {"form": form})
+    return render(request, "news/edit_news.html", {"form": form, 'images':images})
+
 
 
 @permission_required('account.can_delete')
@@ -122,6 +236,8 @@ def delete_news(request, id):
 def list_of_news(request):
     news = News.objects.all()
     return render(request, "news/list_of_news.html", {"news": news})
+
+
 
 
 ############################## Объявления ##############################
@@ -160,7 +276,6 @@ def delete_ads(request, id):
 def list_of_ads(request):
     ads = Ads.objects.all()
     return render(request, "ads/list_of_ads.html", {"ads": ads})
-
 
 
 ############################## Конференции ##############################
@@ -239,27 +354,28 @@ def delete_from_scientists(request, id):  ##удаление из совета
 ############################## Рассылка ##############################
 @permission_required('account.can_edit')
 def post_email(request):
-    if request.method == 'POST':
-        form = EmailPostForm(request.POST, request.FILES)
-        if form.is_valid():
-            subject = form.cleaned_data['title']
-            sender = settings.EMAIL_HOST_USER
-            recipients = ['lashkevich.pk@gmail.com']
-            message = form.cleaned_data['text']
-            if request.FILES:
-                uploaded_file = request.FILES['file']
-            try:
-                email = EmailMessage(subject, message, sender, recipients)
-                email.attach(uploaded_file.name, uploaded_file.read(), uploaded_file.content_type)
-                email.send()
-                messages.success(request, 'Письмо успешно отправлено')
-                return render(request, 'account/dashboard.html')
-            except:
-                return "Ошибка"
-    else:
-        form = EmailPostForm()
-    return render(request, 'email/email.html', {'form': form})
-
+    send_mail('Тестик', 'МОЁ СООБЩЕНИЕ', 'salushkin1998@bk.ru', ['kotovamasha6767@mail.ru'],
+              fail_silently=False)
+    # if request.method == 'POST':
+    #     form = EmailPostForm(request.POST, request.FILES)
+    #     if form.is_valid():
+    #         subject = form.cleaned_data['title']
+    #         sender = settings.EMAIL_HOST_USER
+    #         recipients = ['lashkevich.pk@gmail.com']
+    #         message = form.cleaned_data['text']
+    #         if request.FILES:
+    #             uploaded_file = request.FILES['file']
+    #         try:
+    #             email = EmailMessage(subject, message, sender, recipients)
+    #             email.attach(uploaded_file.name, uploaded_file.read(), uploaded_file.content_type)
+    #             email.send()
+    #             messages.success(request, 'Письмо успешно отправлено')
+    #             return render(request, 'account/dashboard.html')
+    #         except:
+    #             return "Ошибка"
+    # else:
+    #     form = EmailPostForm()
+    # return render(request, 'email/email.html', {'form': form})
 
 # @permission_required('account.can_edit')
 # def submit_an_application(request, id ):

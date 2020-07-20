@@ -201,6 +201,10 @@
                 </div>
                 <br>
                 <p class="text-justify px-2" style="text-indent: 50px">{{ this_news.text }}</p>
+
+
+
+
             {% endfor %}
         </div>
 {#    объявления#}
@@ -220,6 +224,31 @@
             {% endfor %}
         </div>
 {#    объявления#}
+    {#    polls#}
+    {% if request.user.is_authenticated %}
+    <div id="polls" class="mt-5">
+    <h2 ><a style="color: #000000; margin:30px 0 20px; text-decoration:none;" href="{% url 'home' %}">Доступные опросы</a></h2>
+
+             <ul class="list-group">
+                {% for poll in polls %}
+                    <li class="list-group-item">
+                        <strong>{{ poll.question }}</strong>
+                        <span style="display: flex; justify-content: flex-end" class="pull-right">
+                            {% if not user.is_superuser %}
+                                <a style="display: block; width: 25%" href="{% url 'vote' poll.id %}" class="btn btn-info btn-xs">Проголосовать</a> &nbsp;
+                            {% endif %}
+                            {% if user.is_superuser %}
+                                <a style="display: block; width: 25%" href="{% url 'results' poll.id %}" class="btn btn-default btn-xs">Показать результаты</a> &nbsp;
+                                <a href="{% url 'delete' poll.id %}" class="btn btn-default btn-xs">Удалить опрос</a>
+                            {% endif %}
+                        </span>
+                    </li>
+                {% endfor %}
+             </ul>
+
+        </div>
+    {% endif %}
+{#    polls#}
         <!-- Конференции -->
         <div id="conferences" class="mt-5">
             <h2>Конференции</h2>
