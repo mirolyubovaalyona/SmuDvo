@@ -8,12 +8,13 @@
         <p><a href="{% url "edit" %}">Изменить данные профиля </a> </p>
         {% if not uset.profile.user_submit %}
             <p><a href="{% url "submit_an_application" %}">Подать заявку на вступление в совет </a> </p>
-        {% endif %}
-{#        ##############?????????????????????????????#####################}
-        {% if uset.profile.user_submit %}
+        {% else%}
+
+
+
+{#            fix#}
             <p>Заявка отправлена, ожидание результата </p>
         {% endif %}
-{#        ##############?????????????????????????????#####################}
     {% endif %}
         <p><a href="{% url "password_change" %}">Изменить пароль</a></p>
     {% if user.is_superuser %}
@@ -26,5 +27,6 @@
         <p><a href="{% url "create_conference" %}">Добавить конференцию</a></p>
         <p><a href="{% url "list_of_scientists" %}">Управление пользователями</a></p>
         <p><a href="{% url "post_email" %}">Отправить письмо</a></p>
+        <p><a href="{% url 'create' %}">Создать опрос</a></p> &nbsp;
     {% endif %}
 {% endblock %}

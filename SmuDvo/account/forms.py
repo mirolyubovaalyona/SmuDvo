@@ -1,7 +1,16 @@
 
 from django import forms
 from django.contrib.auth.models import User
+from django.forms import ModelForm
 from .models import *
+
+
+# Голосование
+class CreatePollForm(ModelForm):
+    class Meta:
+        model = Poll
+        fields = ['question', 'option_one', 'option_two', 'option_three']
+# Голосование
 
 
 class LoginForm(forms.Form):
@@ -83,7 +92,7 @@ class EmailPostForm(forms.Form):
 class NewsForm(forms.ModelForm):
     class Meta:
         model = News
-        fields = ['title', 'photo', 'text']
+        fields = ['title', 'text']
 
 
 class AdsForm(forms.ModelForm):
