@@ -94,6 +94,12 @@ class NewsForm(forms.ModelForm):
         model = News
         fields = ['title', 'text']
 
+class ImagesForm(forms.ModelForm):
+    image = forms.ImageField(label='Image')
+
+    class Meta:
+        model = Images
+        fields = ('image',)
 
 class AdsForm(forms.ModelForm):
     class Meta:

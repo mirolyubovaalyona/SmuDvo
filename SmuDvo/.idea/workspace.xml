@@ -29,6 +29,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -37,6 +38,12 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\smudvo-master" />
+      <recent name="D:\smudvo-master\account\templates" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Unnamed" type="Python.DjangoServer" factoryName="Django server" nameIsGenerated="true">
@@ -108,7 +115,9 @@
       <workItem from="1595174656357" duration="1550000" />
       <workItem from="1595176221874" duration="8047000" />
       <workItem from="1595184574894" duration="798000" />
-      <workItem from="1595215805381" duration="856000" />
+      <workItem from="1595215805381" duration="2028000" />
+      <workItem from="1595218226852" duration="1849000" />
+      <workItem from="1595257845372" duration="5947000" />
     </task>
     <servers />
   </component>
@@ -138,22 +147,22 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="1250" y="301" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1595174750536" />
-    <state width="1244" height="353" key="GridCell.Tab.0.bottom" timestamp="1595184274684">
+    <state width="1057" height="95" key="GridCell.Tab.0.bottom" timestamp="1595218199245">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1244" height="353" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1595184274684" />
-    <state width="1244" height="353" key="GridCell.Tab.0.center" timestamp="1595184274684">
+    <state width="1057" height="95" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1595218199245" />
+    <state width="1057" height="95" key="GridCell.Tab.0.center" timestamp="1595218199245">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1244" height="353" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1595184274684" />
-    <state width="1244" height="353" key="GridCell.Tab.0.left" timestamp="1595184274683">
+    <state width="1057" height="95" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1595218199245" />
+    <state width="1057" height="95" key="GridCell.Tab.0.left" timestamp="1595218199245">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1244" height="353" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1595184274683" />
-    <state width="1244" height="353" key="GridCell.Tab.0.right" timestamp="1595184274684">
+    <state width="1057" height="95" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1595218199245" />
+    <state width="1057" height="95" key="GridCell.Tab.0.right" timestamp="1595218199245">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1244" height="353" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1595184274684" />
+    <state width="1057" height="95" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1595218199245" />
     <state width="2005" height="376" key="GridCell.Tab.1.bottom" timestamp="1595176207025">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>

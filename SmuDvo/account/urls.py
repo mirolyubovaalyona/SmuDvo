@@ -4,6 +4,10 @@ from . import views
 from django.conf import settings
 
 urlpatterns = [
+# posts
+    path('blog/', views.blog_view, name='blog'),
+    path('<int:id>/', views.detail_view, name='detail'),
+
     path('login/', auth_views.LoginView.as_view(), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('', views.dashboard, name='dashboard'),

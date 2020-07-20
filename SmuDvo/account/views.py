@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login
 from .forms import LoginForm, UserRegistrationForm, UserEditForm, \
@@ -16,7 +16,7 @@ from django.forms import modelformset_factory
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .forms import NewsForm
+from .forms import NewsForm, ImagesForm
 from .models import Images
 
 from django.shortcuts import render
@@ -25,6 +25,21 @@ from django.urls import reverse_lazy
 import datetime
 from django.db.models import Q
 from django.views.generic import ListView
+
+
+from .models import Post, PostImage
+
+def blog_view(request):
+    posts = Post.objects.all()
+    return render(request, 'blog.html', {'posts':posts})
+
+def detail_view(request, id):
+    post = get_object_or_404(Post, id=id)
+    photos = PostImage.objects.filter(post=post)
+    return render(request, 'detail.html', {
+        'post':post,
+        'photos':photos
+    })
 
 
 
@@ -183,17 +198,23 @@ def edit(request):
 def create_news(request):
     if request.method == 'POST':
         form = NewsForm(request.POST, request.FILES)
-        if form.is_valid():
+        images = ImagesForm(request.POST, request.FILES,
+                               queryset=Images.objects.none())
+        if form.is_valid() and images.is_valid():
             form.save()
+            images.save()
             return HttpResponseRedirect('/account')
     else:
         form = NewsForm()
-    return render(request, 'news/create_news.html', {'form': form})
+        images = ImagesForm()
+    return render(request, 'news/create_news.html', {'form': form, 'images': images})
 
 
 @permission_required('account.can_edit')
 def edit_news(request, id):
     n = News.objects.get(id=id)
+    news = get_object_or_404(News, id=id)
+    images = Images.objects.filter(news=news)
     if request.method == "POST":
         form = NewsForm(data=request.POST, files=request.FILES, instance=n)
         if form.is_valid():
@@ -201,7 +222,8 @@ def edit_news(request, id):
             return HttpResponseRedirect("/account")
     else:
         form = NewsForm(instance=n)
-    return render(request, "news/edit_news.html", {"form": form})
+    return render(request, "news/edit_news.html", {"form": form, 'images':images})
+
 
 
 @permission_required('account.can_delete')
