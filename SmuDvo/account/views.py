@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.contrib.auth import authenticate, login
 from .forms import LoginForm, UserRegistrationForm, UserEditForm, \
     ProfileEditForm, EmailPostForm, NewsForm, ConferenceForm, AdsForm
@@ -25,6 +25,7 @@ from django.urls import reverse_lazy
 import datetime
 from django.db.models import Q
 from django.views.generic import ListView
+from django.urls import reverse
 
 
 from .models import Post, PostImage
@@ -41,7 +42,77 @@ def detail_view(request, id):
         'photos':photos
     })
 
+def list(request):
+    news_list=News.objects.all()
+    return render(request, 'news/list.html', {'news_list':news_list})
 
+def leave_img(request, news_id):
+    try:
+        news = News.objects.get(id=news_id)
+    except:
+        raise Http404("Новость не найдена")
+    news.images_set.create(image = request.POST['image'])
+    return HttpResponseRedirect(reverse('news:detail_news', args= (news.id,)))
+
+def detail_news(request, news_id):
+    try:
+        news = News.objects.get(id=news_id)
+    except:
+        raise Http404("Новость не найдена")
+
+    img_list=news.images_set.all()
+    return render(request, "news/detail_news.html", {"news": news, "img_list": img_list})
+
+
+
+
+    ############################## Новости ##############################
+
+    @permission_required('account.can_add')
+    def create_news(request):
+        ImagesFormSet = modelformset_factory(Images,
+                                             form=ImagesForm, extra=3)
+        if request.method == 'POST':
+            form = NewsForm(request.POST, request.FILES)
+            images = ImagesFormSet(request.POST, request.FILES,
+                                   queryset=Images.objects.none())
+            if form.is_valid() and images.is_valid():
+                post_form = form.save(commit=False)
+                post_form.user = request.user
+                post_form.save()
+                for f in images.cleaned_data:
+                    image = f['image']
+                    photo = Images(post=post_form, image=image)
+                    photo.save()
+                return HttpResponseRedirect('/account')
+        else:
+            form = NewsForm()
+            images = ImagesFormSet(queryset=Images.objects.none())
+        return render(request, 'news/create_news.html', {'form': form, 'images': images})
+
+    @permission_required('account.can_edit')
+    def edit_news(request, id):
+        n = News.objects.get(id=id)
+        news = get_object_or_404(News, id=id)
+        images = Images.objects.filter(news=news)
+        if request.method == "POST":
+            form = NewsForm(data=request.POST, files=request.FILES, instance=n)
+            if form.is_valid():
+                form.save()
+                return HttpResponseRedirect("/account")
+        else:
+            form = NewsForm(instance=n)
+        return render(request, "news/edit_news.html", {"form": form, 'images': images})
+
+    @permission_required('account.can_delete')
+    def delete_news(request, id):
+        new = News.objects.get(id=id)
+        new.delete()
+        return HttpResponseRedirect("/account")
+
+    def list_of_news(request):
+        news = News.objects.all()
+        return render(request, "news/list_of_news.html", {"news": news})
 
 
 ############################ Голосование ###########################
@@ -194,19 +265,44 @@ def edit(request):
 
 
 ############################## Новости ##############################
+############################## Новости ##############################
+############################## Новости ##############################
+############################## Новости ##############################
+############################## Новости ##############################
+############################## Новости ##############################
+############################## Новости ##############################
+############################## Новости ##############################
+############################## Новости ############################################################ Новости ##############################
+############################## Новости ##############################
+############################## Новости ##############################
+############################## Новости ##############################
+############################## Новости ##############################
+############################## Новости ##############################
+############################## Новости ##############################
+############################## Новости ############################################################ Новости ############################################################ Новости ############################################################ Новости ############################################################ Новости ############################################################ Новости ##############################
+############################## Новости ##############################
+
+
 @permission_required('account.can_add')
 def create_news(request):
+    ImagesFormSet = modelformset_factory(Images,
+                                        form=ImagesForm, extra=3)
     if request.method == 'POST':
         form = NewsForm(request.POST, request.FILES)
-        images = ImagesForm(request.POST, request.FILES,
+        images = ImagesFormSet(request.POST, request.FILES,
                                queryset=Images.objects.none())
         if form.is_valid() and images.is_valid():
-            form.save()
-            images.save()
+            post_form = form.save(commit=False)
+            post_form.user = request.user
+            post_form.save()
+            for f in images.cleaned_data:
+                image = f['image']
+                photo = Images(post=post_form, image=image)
+                photo.save()
             return HttpResponseRedirect('/account')
     else:
         form = NewsForm()
-        images = ImagesForm()
+        images = ImagesFormSet(queryset=Images.objects.none())
     return render(request, 'news/create_news.html', {'form': form, 'images': images})
 
 

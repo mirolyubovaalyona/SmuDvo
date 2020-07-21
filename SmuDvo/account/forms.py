@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 from django.forms import ModelForm
 from .models import *
 
-
 # Голосование
 class CreatePollForm(ModelForm):
     class Meta:
@@ -93,6 +92,12 @@ class NewsForm(forms.ModelForm):
     class Meta:
         model = News
         fields = ['title', 'text']
+
+class NewsFullForm(NewsForm): #extending form
+    images = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True}))
+
+    class Meta(NewsForm.Meta):
+        fields = NewsForm.Meta.fields + ['images',]
 
 class ImagesForm(forms.ModelForm):
     image = forms.ImageField(label='Image')

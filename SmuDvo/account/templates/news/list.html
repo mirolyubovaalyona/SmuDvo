@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="text-fluid" style="margin: 80px">
-        {% for this_news in news %}
+        {% for this_news in news_list %}
             <h2>
                 {{ this_news.title }}
             </h2>
@@ -17,7 +17,7 @@
                 {{ this_news.text }}
             </p>
             {% if request.user.is_superuser %}
-                <a class="btn btn-outline-success"  href="edit_news/{{ this_news.id }}"> Редактировать </a>
+                <a class="btn btn-outline-success"  href="detail_news/{{ this_news.id }}"> Редактировать </a>
                 <a class="btn btn-outline-danger" href="delete_news/{{ this_news.id }}">Удалить</a>
             {% endif %}
             <hr>

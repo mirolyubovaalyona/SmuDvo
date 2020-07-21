@@ -55,7 +55,6 @@ class Ads(models.Model):
 
 class News(models.Model):
     title = models.CharField(max_length=200)
-    photo = models.ImageField(upload_to='news/%Y/%m-%d/', blank=True)
     text = models.TextField(default='')
 
 
@@ -64,7 +63,7 @@ class News(models.Model):
         verbose_name_plural = 'новости'
 
 class Images (models.Model):
-    news = models.ForeignKey(News, default=None, related_name='images', on_delete=models.CASCADE)
+    news = models.ForeignKey(News, default=None, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='news/%Y/%m-%d/', null=True, blank=True)
 
     def __str__(self):

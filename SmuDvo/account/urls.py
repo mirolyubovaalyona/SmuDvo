@@ -7,6 +7,9 @@ urlpatterns = [
 # posts
     path('blog/', views.blog_view, name='blog'),
     path('<int:id>/', views.detail_view, name='detail'),
+    path('list', views.list, name='news'),
+    path('detail_news/<int:news_id>/', views.detail_news, name='news_datail'),
+    path('detail_news/<int:news_id>/leave_img/', views.leave_img, name='leave_img'),
 
     path('login/', auth_views.LoginView.as_view(), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
@@ -23,6 +26,7 @@ urlpatterns = [
     path('create_news/', views.create_news, name='create_news'),
     path('list_of_news', views.list_of_news, name='list_of_news'),
     path('delete_news/<int:id>/', views.delete_news),
+    path('edit_news/<int:id>', views.edit_news),
 
 
 
