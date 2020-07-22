@@ -51,7 +51,7 @@ def leave_img(request, news_id):
         news = News.objects.get(id=news_id)
     except:
         raise Http404("Новость не найдена")
-    news.images_set.create(image = request.POST['image'])
+    news.images_set.create(image = request.FILES['image'])
     return HttpResponseRedirect(reverse('news:detail_news', args= (news.id,)))
 
 def detail_news(request, news_id):
@@ -60,8 +60,16 @@ def detail_news(request, news_id):
     except:
         raise Http404("Новость не найдена")
 
+    if request.method == "POST":
+        form = NewsForm(data=request.POST, files=request.FILES, instance=news)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect("/account/list")
+    else:
+        form = NewsForm(instance=news)
+
     img_list=news.images_set.all()
-    return render(request, "news/detail_news.html", {"news": news, "img_list": img_list})
+    return render(request, "news/detail_news.html", {"news": news, "form": form, "img_list": img_list})
 
 
 

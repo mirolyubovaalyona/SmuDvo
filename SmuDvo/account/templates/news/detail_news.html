@@ -1,27 +1,80 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head> 
-    <meta charset="UTF-8"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport", initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Изменение новости</title>
     <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head> 
 <body>
+<div class="container py-4">
+
     <div style="margin: 80px">
         <h1 class="text-center">Редактирование новости</h1> <br>
-        <form method = "post" enctype="multipart/form-data">
-            {% csrf_token %}
+
             <table class="table table-bordered">
-                {{ news }}
                 {% if img_list %}
+
+                            <!--Carousel Wrapper-->
+                            <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
+                                <!--Indicators-->
+                                <ol class="carousel-indicators">
+                                {% for p in img_list %}
+                                  <li data-target="#carousel-example-1z" data-slide-to="{{ forloop.counter0 }}" class="{% if forloop.counter0 == 0 %} active {% endif %}"></li>
+                                {% endfor %}
+                                </ol>
+                                <!--/.Indicators-->
+                                <!--Slides-->
+                                <div class="carousel-inner" role="listbox">
+                                  {% for p in img_list %}
+                                  <div class="carousel-item {% if forloop.counter0 == 0 %} active {% endif %}">
+                                    <img class="d-block w-100" src="{{p.image.url}}"
+                                      alt="First slide">
+                                  </div>
+                                  {% endfor %}
+                                  <!--/First slide-->
+                                <!--/.Slides-->
+                                <!--Controls-->
+                                <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="sr-only">Next</span>
+                                </a>
+                                <!--/.Controls-->
+                              </div>
+                            </div>
+                            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+                            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+                            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
                     {% for i in img_list %}
-                        {{ i.image }}
+                        <img class="img-fluid rounded"  src="{{i.image.url}}">
                     {% endfor %}
                 {% else %}
                  Изображения не найдены
                 {% endif %}
-            </table>
+
+                <form action="{% url 'leave_img' news.id%}" method = "post" >
+                    {% csrf_token %}
+                    <input type="file" name="image"><br>
+                <button type="submit" >Ещё картинку</button>
+                </form>
+
+        <form method = "post" enctype="multipart/form-data">
+            {% csrf_token %}
+                {{ form }}
             <button type="submit" class="btn btn-success float-left">Изменить новость</button>
+
         </form>
+
+            </table>
+
     </div>
+</div>
 </body> 
 </html> 

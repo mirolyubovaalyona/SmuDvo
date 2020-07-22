@@ -103,6 +103,7 @@ class ImagesForm(forms.ModelForm):
     image = forms.ImageField(label='Image')
 
     class Meta:
+        image = forms.ImageField(label='Images')
         model = Images
         fields = ('image',)
 
